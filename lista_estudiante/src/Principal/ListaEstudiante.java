@@ -29,12 +29,11 @@ public class ListaEstudiante {
         while (op != 8) {
             op = Integer.parseInt(JOptionPane.showInputDialog(
                     "Menú"
-                    + "\n 1 ~> Agregar al inicio"
-                    + "\n 2 ~> Agregar Final"
-                    + "\n 3 ~> Mostrar"
+                    + "\n 1 ~> Agregar Estudiante"
+                    + "\n 2 ~> Mostrar"
+                    + "\n 3 ~> Buscar"
                     + "\n 4 ~> Eliminar"
-                    + "\n 5 ~> Buscar"
-                    + "\n 9 ~> Salir"));
+                    + "\n 5 ~> Salir"));
 
             switch (op) {
                 case 1: {
@@ -43,26 +42,21 @@ public class ListaEstudiante {
                 }
 
                 case 2: {
-                    agregarAlFinal();
+                    mostrar();
 
                     break;
                 }
                 case 3: {
-                    mostrar();
+                      buscar();
+                   
                     break;
                 }
 
                 case 4: {
-                    eliminar();
+                   eliminar();
                     break;
                 }
-
                 case 5: {
-                    buscar();
-                    break;
-                }
-
-                case 9: {
                     System.exit(0);
                     break;
                 }
@@ -159,7 +153,7 @@ System.out.println("Error al escribir");
 
     public boolean buscar() {
         if (esVacia()) {
-            JOptionPane.showMessageDialog(null, "No se encontró este registro.");
+            JOptionPane.showMessageDialog(null, "No se encontró registro.");
         }
 
         Nodo aux = inicio;
@@ -173,7 +167,7 @@ System.out.println("Error al escribir");
                 encontrado = true;
 
             } else {
-                JOptionPane.showMessageDialog(null, "No se encontró este registro");
+                JOptionPane.showMessageDialog(null, "No se encontró registro");
                 aux = aux.getSiguiente();
             }
 
@@ -220,7 +214,7 @@ System.out.println("Error al escribir");
     public void eliminar() {
         inicio = null;
         tam = 0;
-        JOptionPane.showMessageDialog(null, "Datos de estudiantes eliminados!");
+        JOptionPane.showMessageDialog(null, "Informacion del estudiante eliminado");
     }
 
 
