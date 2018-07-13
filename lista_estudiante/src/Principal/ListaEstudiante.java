@@ -28,7 +28,7 @@ public class ListaEstudiante {
 
         while (op != 8) {
             op = Integer.parseInt(JOptionPane.showInputDialog(
-                    "Menú"
+                    "agregar informacion del estudiante"
                     + "\n 1 ~> Agregar Estudiante"
                     + "\n 2 ~> Mostrar"
                     + "\n 3 ~> Buscar"
